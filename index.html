@@ -1,35 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slither.io Mod Menu</title>
+    <title>PDF Toolkit Pro - Ferramenta Completa para PDFs</title>
+    <meta name="description" content="Ferramenta completa para manipulação de PDFs: comprimir, mesclar, dividir, converter e chat inteligente com IA" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Loading animation */
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+
+        .animate-pulse {
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Prose styling for markdown */
+        .prose {
+          max-width: none;
+        }
+        
+        .prose h1, .prose h2, .prose h3, .prose h4 {
+          color: #1f2937;
+          font-weight: 600;
+        }
+        
+        .prose code {
+          background-color: #f3f4f6;
+          padding: 0.125rem 0.25rem;
+          border-radius: 0.25rem;
+          font-size: 0.875em;
+        }
+        
+        .prose pre {
+          background-color: #1f2937;
+          color: #f9fafb;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          overflow-x: auto;
+        }
+        
+        .prose pre code {
+          background-color: transparent;
+          padding: 0;
+          color: inherit;
+        }
+    </style>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              'sans': ['Roboto', 'sans-serif'],
-              'orbitron': ['Orbitron', 'sans-serif'],
+              'inter': ['Inter', 'system-ui', 'sans-serif'],
             },
             colors: {
-              'neon-green': '#39FF14',
-              'neon-cyan': '#00FFFF',
-              'dark-bg': '#0D0221',
-              'dark-panel': '#0F0829',
-              'dark-panel-accent': '#2A1B5B',
-            },
-            boxShadow: {
-              'neon': '0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14',
-              'neon-cyan': '0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF',
+              primary: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8'
+              }
             }
-          },
-        },
+          }
+        }
       }
     </script>
   <script type="importmap">
@@ -42,9 +108,8 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-black">
+  <body class="bg-gray-100">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
